@@ -30,6 +30,49 @@
   </head>
 
   <body>
-    <script defer src="bundle.js" type="text/javascript"></script>
+    <div class="content">
+      <div style="text-align: center;">
+        <h1 class="article-title" style="margin-bottom: 10px;">UMATO Visualization Demo</h1>
+        <div>
+          <h3 style="font-weight: normal; font-style: italic; display: inline">
+            Supplemental material for the academic paper:
+          </h3>
+          <h3 style="font-weight: bold; margin-top: 0; display: inline">
+            Accurate, Scalable, and Stable Dimensionality Reduction Using UMATO
+          </h3>
+        </div>
+      </div>
+      
+
+      <div style="font-size: 80%">
+        <p>
+          Welcome to our UMATO (Uniform Manifold Approximation with Two-phase
+          Optimization) demo! This tool showcases the latest advancements in
+          dimensionality reduction techniques, effectively tackling some of
+          the limitations found in previous models such as UMAP and t-SNE. Now
+          let's dive into our interactive visualization demo, which comprises
+          multiple datasets and parameters to offer you a hands-on experience
+          with UMATO.
+        </p>
+
+        <h4 style="font-weight: bold"> <a href="https://github.com/hyungkwonko/umato">UMATO Github</a></h4>
+
+        <div id="svelte-component"></div>
+        
+        
+        <!-- Your demo script -->
+
+        <div class="bundle-container"></div>
+        <div id="extra-content"></div>
+        
+        <script defer src="bundle.js" type="text/javascript"></script>
+
+        
+        
+        
+        
+    </div>
+    
+    
   </body>
 </html>

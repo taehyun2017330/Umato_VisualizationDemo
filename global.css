@@ -28,7 +28,7 @@ a:visited {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 1.6em;
 }
 
@@ -133,4 +133,37 @@ h2 {
 
   /* Support for IE. */
   font-feature-settings: "liga";
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* The rest of your CSS goes here */
+
+/* Add the centering rules here at the end of your CSS */
+
+.content {
+  margin: 0 auto;
+  max-width: 800px; /* you can adjust this value to suit your needs */
+  padding: 0 20px; /* adds some padding so content isn't touching the edges */
+}
+
+
+/* Add the bundle-container rules */
+
+.bundle-container {
+  margin: 0 auto;
+  max-width: 800px; /* you can adjust this value to suit your needs */
 }

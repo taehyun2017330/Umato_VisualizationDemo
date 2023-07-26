@@ -113,6 +113,7 @@ var app = (function (d3$1) {
     function onMount(fn) {
         get_current_component().$$.on_mount.push(fn);
     }
+    
     function afterUpdate(fn) {
         get_current_component().$$.after_update.push(fn);
     }
@@ -7772,6 +7773,7 @@ if(demoName === 'Two Different-Sized Clusters') {
 
       onMount(() => {
         visualize(points, canvas, null, null);
+        
       });
 
     	const writable_props = ['demo', 'onClick', 'selected'];
@@ -8519,6 +8521,17 @@ if(demoName === 'Two Different-Sized Clusters') {
     			for (let i_1 = 0; i_1 < each_blocks_1.length; i_1 += 1) {
     				each_blocks_1[i_1].c();
     			}
+          let extraContent = `
+  <div>
+    <h3 style="font-weight: bold; font-size: 125%">
+      The Dataset Parameters:
+    </h3>
+    <p>
+      Play around sssssssswith the input data to explore different data landscapes.
+    </p>
+    <!-- ... rest of your HTML ... -->
+  </div>
+`;
 
     			t1 = space();
     			div11 = element("div");
@@ -8659,6 +8672,7 @@ if(demoName === 'Two Different-Sized Clusters') {
     			append_dev(div9, div8);
     			append_dev(div9, t16);
 
+          
     			for (let i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
     				each_blocks[i_1].m(div9, null);
     			}
@@ -8804,6 +8818,8 @@ if(demoName === 'Two Different-Sized Clusters') {
 
     			run_all(dispose);
     		}
+
+        
     	};
     	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$4.name, type: "component", source: "", ctx });
     	return block;
@@ -9174,6 +9190,8 @@ if(demoName === 'Two Different-Sized Clusters') {
     	}
     }
 
+    
+
     /* Copyright 2019 Google LLC All Rights Reserved.
 
       Licensed under the Apache License, Version 2.0 (the "License");
@@ -9190,10 +9208,19 @@ if(demoName === 'Two Different-Sized Clusters') {
       ==============================================================================*/
 
     var main = new Figure_1({
-      target: document.body
+      target: document.querySelector("#svelte-component")
+      
+      
     });
 
+    
+
+
+    
     return main;
 
 }(d3));
+
+
+
 //# sourceMappingURL=bundle.js.map
