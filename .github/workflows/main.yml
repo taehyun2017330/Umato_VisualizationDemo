@@ -1,0 +1,25 @@
+name: Jekyll Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Jekyll site
+      uses: actions/jekyll-build-pages@v1
+      with:
+        source: .
+        destination: ./_site
+        future: false
+        build_revision: 4b918f3336dd8611502b8896abee40a51aabed0c
+        verbose: false
+        token: ${{ secrets.JEKYLL_BUILD_TOKEN }}
+
