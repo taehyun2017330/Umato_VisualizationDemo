@@ -37,3 +37,10 @@ jobs:
         build_revision: 4b918f3336dd8611502b8896abee40a51aabed0c
         verbose: true
         token: ${{ secrets.JEKYLL_BUILD_TOKEN }}
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: ./_site   # The folder the action should deploy.
+        token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication.
