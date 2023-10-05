@@ -3,7 +3,8 @@ name: Jekyll Build
 on:
   push:
     branches:
-      - main
+      - gh-pages
+
 
 jobs:
   build:
